@@ -31,7 +31,7 @@ do {
   }
   guessInput = guessInput.toUpperCase();
 
-  if (!guessInput.search(/[^a-zA-Z]+/) || guessInput.length !== 1) {
+  if (!guessInput.search(/[^a-zA-Z]+/) || guessInput.length !==  1) {
     alert("You have to use a single letter between a-z !");
   } else if (chosenWordHigh.includes(guessInput)) {
     for (let i = 0; i < chosenWord.length; i++) {
@@ -44,7 +44,7 @@ do {
     lives--;
   }
 
-  if (guessInput.search(/[^a-zA-Z]+/)) {
+  if (guessInput.search(/[^a-zA-Z]+/) && guessInput.length === 1)  {
     if (!chosenWordHigh.includes(guessInput)) {
       guessMade.push(guessInput.toLowerCase());
     }
